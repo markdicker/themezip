@@ -2,9 +2,7 @@
 
 ## Creates a wordpress distribution archive file
 
-One of the best things about wordpress development is tools like wp-cli.  However this is designed around the premise that you will be developing your theme or plugin within the wordpress directory structure.  I don't always want to do this.  Sometimes I want to build my plugin elsewhere and push the distribution files to the theme or plugins folder.
-
-whilst wp-cli has a plugin called dist-archive that builds a distribution archive excluding files that are in the .distignore it only works within the wp structure.
+One of the best things about wordpress development is tools like wp-cli.  However this is designed around the premise that you will be developing your theme or plugin within the wordpress directory structure.  I don't always want to do this.  Sometimes I want to build my plugin elsewhere and push the distribution files to the theme or plugins folder.  Whilst wp-cli has a plugin called dist-archive that builds a distribution archive excluding files that are in the .distignore it only works within the wp structure.
 
 In the past i've done this using bash files but I want to use modern tools like gulp to make the process easier.
 
