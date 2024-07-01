@@ -1,0 +1,30 @@
+{
+  "name": "wpzip",
+  "version": "1.0.0",
+  "description": "Creates a theme distribution zip file. Excludes files in .distignore",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markdicker/wpzip.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "plugin",
+    "development",
+    "distribution"
+  ],
+  "author": "Mark Dicker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markdicker/themezip/issues"
+  },
+  "homepage": "https://github.com/markdicker/themezip#readme",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "glob": "^10.4.2"
+  }
+}
