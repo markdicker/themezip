@@ -33,6 +33,12 @@ include it in a gulp task as follows
 
 I combine this package with my themeVersion package as follows
 
+    const tv = require( 'themeversion' );
+
+    .
+    .
+    .
+
     async function generateZip( )
     {
         var ProjectPath = "./";
