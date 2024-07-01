@@ -16,12 +16,15 @@ include it in a gulp task as follows
 
     async function generateZip( )
     {
-        var ProjectPath = "./";
+        var ProjectPath = "./";   // Path of the folder you wish to create a release for
         var version = '1.0.0';  // This should match your theme or plugin version number 
 
-        var zipName = "./project-"+version+".zip";
+        var zipName = "./project-"+version+".zip";  // The name of the zip file 
 
-        zip.wpZip ( zipName, ProjectPath );
+        var targetPath = "theme"+version;       // Name of the root path the files are stored in the zip file 
+                                                // This will be the name within the wp themes folder
+
+        zip.wpZip ( zipName, ProjectPath, targetPath );
 
     }
 
@@ -41,11 +44,15 @@ I combine this package with my themeVersion package as follows
         var ProjectPath = "./";
 
         try {
+            // Get the version number from the style.css file
             const version = await tv.getVersion( path.join( ProjectPath, 'style.css') );
 
-            var zipName = "./project-"+version+".zip";
+            var zipName = "./project-"+version+".zip";  // name of the zip file
 
-            zip.wpZip ( zipName, ProjectPath );
+            var targetPath = "theme"+version;       // Name of the root path the files are stored in the zip file 
+                                                    // This will be the name within the wp themes folder
+
+            zip.wpZip ( zipName, ProjectPath, targetPath );
         }
         catch( e )
         {

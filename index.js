@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
 
-function createArchive( archiveName = "release.zip", basePath = "./" )
+function createArchive( archiveName = "release.zip", basePath = "./", targetPath = "theme" )
 {
     fs.readFile( path.join( basePath, ".distignore"), "UTF8", ( err, content ) => {
         if ( err ) 
@@ -24,7 +24,7 @@ function createArchive( archiveName = "release.zip", basePath = "./" )
                 archive.pipe(output);
     
                 files.forEach( f => {
-                    let name = path.join( "wpzipname", f.replace( path.join( basePath, "" ), "" ));
+                    let name = path.join( targetPath, f.replace( path.join( basePath, "" ), "" ));
     
                     archive.file( f , { name: name });
                 })
@@ -81,7 +81,7 @@ function createArchive( archiveName = "release.zip", basePath = "./" )
                 archive.pipe(output);
     
                 files.forEach( f => {
-                    let name = path.join( "wpzipname", f.replace( path.join( basePath, "" ), "" ));
+                    let name = path.join( targetPath, f.replace( path.join( basePath, "" ), "" ));
     
                     archive.file( f , { name: name });
                 })
