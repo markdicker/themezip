@@ -5,10 +5,6 @@ const archiver = require('archiver');
 
 function createArchive( archiveName = "release.zip", basePath = "./" )
 {
-    console.log( basePath );
-    
-    console.log( path.join( basePath, ".distignore") );
-
     fs.readFile( path.join( basePath, ".distignore"), "UTF8", ( err, content ) => {
         if ( err ) 
         {
@@ -51,8 +47,6 @@ function createArchive( archiveName = "release.zip", basePath = "./" )
                     {
                         try {
                             stat = fs.statSync( path.join( basePath, f ) );
-
-                            // console.log( stat );
 
                             if ( stat && stat.isFile() )
                             {
@@ -97,7 +91,6 @@ function createArchive( archiveName = "release.zip", basePath = "./" )
             }
         }
 
-        console.table( ignoreFiles );
     });
 
 }
