@@ -58,8 +58,8 @@ You can find themeVersion here [https://www.npmjs.com/package/themeversion](http
 
 This makes use of the following node packages
 
-Glob which can you can find out more details about here (https://www.npmjs.com/package/glob)[https://www.npmjs.com/package/glob]
+*Glob* which can you can find out more details about here (https://www.npmjs.com/package/glob)[https://www.npmjs.com/package/glob]
 
 and
 
-Archive which can you can find out more about here (https://www.npmjs.com/package/archiver)[https://www.npmjs.com/package/archiver]
+*Archive* which can you can find out more about here (https://www.npmjs.com/package/archiver)[https://www.npmjs.com/package/archiver]
