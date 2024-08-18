@@ -3,8 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
 
-function createArchive( archiveName = "release.zip", basePath = "./", targetPath = "theme" )
+function createArchive( archiveName = "release.zip", basePath = "./", targetPath = "theme", compression = 9 )
 {
+
     fs.readFile( path.join( basePath, ".distignore"), "UTF8", ( err, content ) => {
         if ( err ) 
         {
@@ -17,7 +18,7 @@ function createArchive( archiveName = "release.zip", basePath = "./", targetPath
                 const output = fs.createWriteStream( archiveName );
     
                 const archive = archiver('zip', {
-                    zlib: { level: 9 } // Sets the compression level.
+                    zlib: { level: compression } // Sets the compression level.
                 });   
     
                 // pipe archive data to the file
@@ -74,7 +75,7 @@ function createArchive( archiveName = "release.zip", basePath = "./", targetPath
                 const output = fs.createWriteStream( archiveName );
     
                 const archive = archiver('zip', {
-                    zlib: { level: 9 } // Sets the compression level.
+                    zlib: { level: compression } // Sets the compression level.
                 });   
     
                 // pipe archive data to the file

@@ -24,7 +24,9 @@ include it in a gulp task as follows
         var targetPath = "theme"+version;       // Name of the root path the files are stored in the zip file 
                                                 // This will be the name within the wp themes folder
 
-        zip.wpZip ( zipName, ProjectPath, targetPath );
+        var compression = 7;    // default level is 9 so you only need to pass it if you need a lower level 
+
+        zip.wpZip ( zipName, ProjectPath, targetPath, compression );
 
     }
 
